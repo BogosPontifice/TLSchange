@@ -10,14 +10,14 @@ func main() {
 
 	//supports TLS1.2 AND TLS1.3 Nmap scan output
 
-	tlsCustomConfig := tls.Config{
+	tlsConfiguration := tls.Config{
 		MaxVersion: tls.VersionTLS13,
 		MinVersion: tls.VersionTLS13,
 	}
 	//mudar a configuração do TLS
 	http := http.Client{
 		Transport: &http.Transport{
-			TLSClientConfig: &tlsCustomConfig,
+			TLSClientConfig: &tlsConfiguration,
 		},
 	}
 
