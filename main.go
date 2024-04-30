@@ -30,6 +30,6 @@ func main() {
 
 	fmt.Println(resp.Status)
 
-	resp.Body.Close()
+	
 
 }
