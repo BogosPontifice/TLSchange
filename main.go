@@ -28,7 +28,10 @@ func main() {
 		return
 	}
 
-	fmt.Println(resp.Status)
+	resp.Body.Close()
+
+	fmt.Println("O status da requisição foi: ", resp.Status)
+	fmt.Println("O Corpo foi: ", string(body))
 
 	
 
